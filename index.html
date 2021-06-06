@@ -1,0 +1,582 @@
+<html>
+	<head>
+		<title> JOGO DA ADIVINHAÇÃO - EETIFAB </title>
+		<meta name="author" content="Edvan Pontes">
+		<meta name="description" content="JOGO DA ADIVINHAÇÃO">
+		<meta name="keywords" content="matemática, jogo, eetifab, JOGO DA ADIVINHAÇÃO">
+		
+		<style>
+			.container{
+				width: 100%;
+				height: 100%;
+			}
+ 
+			.wall{
+				display: none;
+				width: 100%;
+				height: 100%;
+			}
+ 
+			/* Corzinha de fundo para diferenciar
+			.wall-1{ background-color: #f00; }
+			.wall-2{ background-color: #0f0; }
+			.wall-3{ background-color: red; }
+			*/
+			.rodape{
+
+  				text-align: center;
+
+			}
+			
+			#sim1, #sim2, #sim3, #sim4, #sim5{
+				margin-right: 8%;
+			}
+
+			.wall:target{
+				display: block;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			window.location = "#wall-1"
+
+			var soma = 0
+			var expoente = 0
+
+			let pessoas = [
+				//nome, imagem
+				['Escolha uma imagem', 'naoescolheu.png'],
+				['Arlete', 'arlete.png'],
+				['Arnaldo', 'arnaldo.png'],
+				['Claudia','Claudia.png'],
+				['Deca', 'deca.png'],
+				['Dyago', 'dyago.png'],
+				['Edna', 'edna.png'],
+				['Edvan', 'edvan.png'],
+				['Escudo', 'escudo.png'],
+				['Evanusia', 'evanusia.png'],
+				['Fabiana', 'fabiana.png'],
+				['Fernanda', 'fernanda.png'],
+				['Gorete', 'gorete.png'],
+				['Greici','greici.png'],
+				['Hamilton', 'hamilton.png'],
+				['Jilza', 'jilza.png'],
+				['João', 'joao.png'],
+				['Libna', 'libna.png'],
+				['Maiuza', 'maiuza.png'],
+				['Manoel', 'manoel.png'],
+				['Maria José', 'maria.png'],
+				['Marquinho', 'marquinhos.png'],
+				['Mary', 'mary.png'],
+				['Mikarla','mikarla.png'],
+				['Paulo', 'paulo.png'],
+				['Reginaldo', 'reginaldo.png'],
+				['Ribamara', 'ribamara.png'],
+				['Rodrigo', 'rodrigo.png'],  
+				['Rômulo', 'romulo.png'],
+				['Ronaldo', 'ronaldo.png'],
+				['Valéria', 'valeria.png'],
+				['Vanessa', 'vanessa.png']
+			]
+
+			function imagemPresente(resposta) {
+				if(resposta) {
+					soma += Math.pow(2, expoente)
+				}
+				expoente++
+			}
+			
+			function processarResultado() {
+				var img = document.getElementById('img_resposta');
+				var p_nome = document.getElementById('nome_pessoa');
+				img.src = 'imagens/' + pessoas[soma][1];
+				p_nome.innerHTML  = pessoas[soma][0];
+
+			}
+			console.table(pessoas)
+			console.log("oi")
+		</script>
+	</head>
+	<body>
+	
+		<div class="container">
+		
+			<!-- Primeira página -->
+			<div class="wall wall-1" id="wall-1">
+				<h1 align="center">JOGO DA ADIVINHAÇÃO - EETIFAB 2021</h1>
+				<h1 align="center">"Vou descobrir em quem você pensou"</h1>
+				<h1 align="center">Escolha uma das imagens abaixo sem revelar!</h1>
+				<h1 align="center" style="color: red;">TENHA SEMPRE ESSA PESSOA EM MENTE</h1>
+				</br>
+				<table border="0" align="center">
+					<tr align="center">
+						<td colspan="10">
+							<img height="95" width="95" src="imagens/escudo.png"/>
+						</td>
+					</tr>
+					<tr align=center>
+						<td>
+							<img height="95" width="95" src="imagens/deca.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/claudia.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/dyago.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/vanessa.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/ribamara.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/edvan.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/libna.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/arlete.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/fernanda.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/arnaldo.png"/>
+						</td>
+					</tr>
+					<tr align=center>
+						<td>
+							<img height="95" width="95" src="imagens/gorete.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/mikarla.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/hamilton.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/maria.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/marquinhos.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/evanusia.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/joao.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/greici.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/mary.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/reginaldo.png"/>
+						</td>
+					</tr>
+					<tr align=center>
+						<td>
+							<img height="95" width="95" src="imagens/paulo.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/manoel.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/edna.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/rodrigo.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/maiuza.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/fabiana.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/jilza.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/romulo.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/ronaldo.png"/>
+						</td>
+						<td>
+							<img height="95" width="95" src="imagens/valeria.png"/>
+						</td>
+					</tr>
+				</table>
+				</br>
+				<h1 align=center>Já escolheu? <a href="#wall-2">Prossiga</a></h1>
+			</div>
+
+  			<!-- Segunda página -->
+			<div class="wall wall-2" id="wall-2">
+				<h1 align="center">JOGO DA ADIVINHAÇÃO - EETIFAB 2021</h1>
+				<h1 align="center" style="color: red;">VEJA COM ATENÇÃO!</h1>
+				<table align="center">
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/greici.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/ronaldo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/reginaldo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/fernanda.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/jilza.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/dyago.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/evanusia.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/claudia.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/vanessa.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/libna.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/marquinhos.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/mikarla.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/arlete.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/manoel.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/edvan.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/rodrigo.png"/>
+						</td>
+					</tr>
+				</table>
+				</br>
+				<h1 align="center">A imagem que você escolheu está aqui?</h1>
+				<div class="rodape" >
+					<h1> <a href="#wall-3" id="sim1" align="left" onclick="imagemPresente(true)"> SIM </a> 
+					<a href="#wall-3" id="nao1" align="right" onclick="imagemPresente(false)"> NÃO </a> </h1>
+				</div>
+			</div>
+  
+  			<!-- Terceira página -->
+			<div class="wall wall-3" id="wall-3">
+				<h1 align="center">JOGO DA ADIVINHAÇÃO - EETIFAB 2021</h1>
+				<h1 align="center" style="color: red;">VEJA COM ATENÇÃO!</h1>
+				<table align="center">
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/maiuza.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/ribamara.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/arnaldo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/rodrigo.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/hamilton.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/edvan.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/mikarla.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/mary.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/claudia.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/edna.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/fabiana.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/manoel.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/valeria.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/vanessa.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/fernanda.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/jilza.png"/>
+						</td>
+					</tr>
+				</table>
+				</br>
+				<h1 align="center">A imagem que você escolheu está aqui?</h1>
+				<div class="rodape" >
+					<h1> <a href="#wall-4" id="sim2" align="left" onclick="imagemPresente(true)"> SIM </a> 
+					<a href="#wall-4" id="nao2" align="right" onclick="imagemPresente(false)"> NÃO </a> </h1>
+				</div>
+			</div>
+
+			<!-- Quarta página -->
+			<div class="wall wall-4" id="wall-4">
+				<h1 align="center">JOGO DA ADIVINHAÇÃO - EETIFAB 2021</h1>
+				<h1 align="center" style="color: red;">VEJA COM ATENÇÃO!</h1>
+				<table align="center">
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/edna.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/mary.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/mikarla.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/ronaldo.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/jilza.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/deca.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/valeria.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/greici.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/dyago.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/edvan.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/vanessa.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/maria.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/gorete.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/hamilton.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/marquinhos.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/romulo.png"/>
+						</td>
+					</tr>
+				</table>
+				</br>
+				<h1 align="center">A imagem que você escolheu está aqui?</h1>
+				<div class="rodape" >
+					<h1> <a href="#wall-5" id="sim3" align="left" onclick="imagemPresente(true)"> SIM </a> 
+					<a href="#wall-5" id="nao3" align="right" onclick="imagemPresente(false)"> NÃO </a> </h1>
+				</div>
+			</div>
+
+			<!-- Quinta página -->
+			<div class="wall wall-5" id="wall-5">
+				<h1 align="center">JOGO DA ADIVINHAÇÃO - EETIFAB 2021</h1>
+				<h1 align="center" style="color: red;">VEJA COM ATENÇÃO!</h1>
+				<table align="center">
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/reginaldo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/greici.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/hamilton.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/valeria.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/fabiana.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/ronaldo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/paulo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/rodrigo.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/gorete.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/escudo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/fernanda.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/vanessa.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/jilza.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/ribamara.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/romulo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/evanusia.png"/>
+						</td>
+					</tr>
+				</table>
+				</br>
+				<h1 align="center">A imagem que você escolheu está aqui?</h1>
+				<div class="rodape" >
+					<h1> <a href="#wall-6" id="sim4" align="left" onclick="imagemPresente(true)"> SIM </a> 
+					<a href="#wall-6" id="nao4" align="right" onclick="imagemPresente(false)"> NÃO </a> </h1>
+				</div>
+			</div>
+
+			<!-- Sexta página -->
+			<div class="wall wall-6" id="wall-6">
+				<h1 align="center">JOGO DA ADIVINHAÇÃO - EETIFAB 2021</h1>
+				<h1 align="center" style="color: red;">VEJA COM ATENÇÃO!</h1>
+				<table align="center">
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/ronaldo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/romulo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/paulo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/valeria.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/reginaldo.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/mikarla.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/maiuza.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/maria.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/manoel.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/vanessa.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/mary.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/libna.png"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img height="115" width="115" src="imagens/marquinhos.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/joao.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/ribamara.png"/>
+						</td>
+						<td>
+							<img height="115" width="115" src="imagens/rodrigo.png"/>
+						</td>
+					</tr>
+				</table>
+				</br>
+				<h1 align="center">A imagem que você escolheu está aqui?</h1>
+				<div class="rodape" >
+					<h1> <a href="#wall-7" id="sim5" align="left" onclick="imagemPresente(true); processarResultado()"> SIM </a> 
+					<a href="#wall-7" id="nao5" align="right" onclick="imagemPresente(false); processarResultado()" > NÃO </a> </h1>
+				</div>
+			</div>
+
+			<!-- Sétima página -->
+			<div class="wall wall-7" id="wall-7" align="center">
+				<h1 align="center">JOGO DA ADIVINHAÇÃO - EETIFAB 2021</h1>
+				<h1 align="center" style="color: red;">Você pensou em:</h1>
+				<p align="center">
+					<img id="img_resposta" height="500" width="500" src="#"/>
+				</p>
+				<p id="nome_pessoa" align="center">
+				</p>
+				<button onClick="window.location.reload();" font-size="100" style="width:150;height:75">JOGUE NOVAMENTE</button>
+			</div>
+		</div>
+	
+	</body>
+</html>
